@@ -26,6 +26,8 @@ function AccountOperations() {
 
   function handleRequestLoan() {
     dispatch(loanTaken(loanAmount, loanPurpose));
+    setLoanPurpose ("")
+    setLoanAmount("")
   }
 
   function handlePayLoan() {

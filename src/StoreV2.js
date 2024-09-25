@@ -1,7 +1,7 @@
 // import { combineReducers, createStore  } from "redux";
-// import accountReducer from "./features/Accounts/AccountSlice";
-// import customerReducer from "./features/Customers/CustomerSlice";
-// import { configureStore } from "@reduxjs/toolkit";
+import accountReducer from "./features/Accounts/AccountSlice";
+import customerReducer from "./features/Customers/CustomerSlice";
+import { configureStore } from "@reduxjs/toolkit";
 
 
 // const store = createStore(accountReducer);
@@ -12,7 +12,12 @@
 // });
 
 // const store = createStore (rootReducer)
-//  const configureStore ()
+ const store =  configureStore ({
+  reducer : {
+    account : accountReducer,
+    customer : customerReducer
+  }
+ })
 
 
 
@@ -22,4 +27,4 @@
 // console.log(store.getState().customer)
 
 
-// export default store;
+export default store;
